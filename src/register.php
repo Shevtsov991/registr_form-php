@@ -34,8 +34,8 @@ if (empty($name)|| empty($email)||empty($tel)||empty($pass)|| empty($repPass)) {
         if ($connection -> query($sql)) {
             
             
-            echo $email;
-            echo "Регистрация проша успешно!" . '<br/>';
+            echo $name;
+            echo " регистрация проша успешно!" . '<br/>';
             echo $back . '<br/>';
             echo "<a href ='./user-panel.php?email=$email'><button>Войти</button></a>";
             /*kaptcha */

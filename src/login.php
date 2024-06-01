@@ -3,12 +3,12 @@ require_once ("db.php");
 
 $login = $_POST["login"];
 $password = $_POST["password"];
-
+$back = '<a href ="../index.php" ><button>На главную</button></a>';
 
 
 if (empty($login) || empty($password)) {
-    echo "Заполните все поля";
-    
+    echo "Заполните все поля! </br>";
+    echo $back;
 
 }else {
     $sql = "SELECT * FROM `users` WHERE  (tel = '$login' OR Email = '$login') AND password = '$password' ";
