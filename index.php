@@ -8,16 +8,7 @@
     <link href="./src/css/style.css" rel="stylesheet" type="text/css" media="all"/>  
 </head>
 <body>
-     <?php
-    
-    // require_once('./src/db.php');
-    // $sql ="CREATE DATABASE registerUsers";
-    // if ($connection -> query($sql)) {
-    //     echo "Успешно";
-    // }else{
-    //     echo "Ошибка: " . $conn->error;
-    // }
-    ?> 
+
 <div class="form">
         <h1 class="titel">Войти<h1>
         <form action="./src/login.php" method="post">  
@@ -41,12 +32,12 @@
         </form>
     </div>
 
-        <div;
+        <!-- <div;
             style="height: 100px";
             id="captcha-container";
             class="smart-captcha";
             data-sitekey="ysc1_Pc5BL8D5ew910A722f6HPe65GczkGXB4piQFFwe887745e6f";
-        ></div>;
+        ></div>; -->
 
 </body>
 </html>
