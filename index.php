@@ -6,6 +6,8 @@
     <title>Главная</title>
     <link href="./src/css/style.css" rel="stylesheet" type="text/css" media="all"/>    
     <script src="https://captcha-api.yandex.ru/captcha.js" defer></script>
+    <link href="./src/css/style.css" rel="stylesheet" type="text/css" media="all"/>    
+    <script src="https://captcha-api.yandex.ru/captcha.js" defer></script>
 </head>
 <body>
     <h1>Главная страница</h1>
