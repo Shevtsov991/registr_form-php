@@ -7,6 +7,7 @@ $sql = "SELECT * FROM `users` WHERE id = '$userid' ";
 }else if(isset($_GET["email"])){
 $getEmail = $_GET["email"];
 $sql = "SELECT * FROM `users` WHERE  Email = '$getEmail'";
+
 }
 
 
@@ -19,7 +20,7 @@ $name = $row['userName'];
 $tel = $row['tel'];
 $email = $row['Email'];
 $pass = $row['password'];
-
+$userid =$row['id']
 
 
 
@@ -48,8 +49,9 @@ $pass = $row['password'];
             <input type="text" name="id" style="display:none;" value="<?php echo $userid;?>" >
         
             </div>
-            <button type="submit">Отправить</button>
+            <button type="submit" class="btn">Отправить</button>
         </form>
+        <a href= "../index.php"><button class="btn">На главную</button></a>
     </div>
 
 

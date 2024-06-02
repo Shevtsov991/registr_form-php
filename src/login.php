@@ -1,14 +1,34 @@
 <?php
 require_once ("db.php");
+require_once ("check_captcha.php");
+
+function redirect_back(array $params = []) {
+    $url = $_SERVER['HTTP_REFERER'];
+    if(!empty($params)){
+        $url .= '?' . http_build_query($params);
+    }
+    header('Location: ' . $url);
+}
+
+
+$smartToken = $_POST["smart-token"];
+if(empty($smartToken)) {
+    redirect_back(['error'=>'Пройдите капчу!']);
+    exit();
+ 
+} elseif(!check_captcha($smartToken)) {
+    redirect_back(['error'=>'Smart token is incorrect']);
+    exit();
+}
 
 $login = $_POST["login"];
 $password = $_POST["password"];
-
+$back = '<a href ="../index.php" ><button>На главную</button></a>';
 
 
 if (empty($login) || empty($password)) {
-    echo "Заполните все поля";
-    
+    echo "Заполните все поля! </br>";
+    echo $back;
 
 }else {
     $sql = "SELECT * FROM `users` WHERE  (tel = '$login' OR Email = '$login') AND password = '$password' ";
