@@ -9,8 +9,10 @@ $pass = $_GET["pass"];
 
 
   
-$sql = "UPDATE users SET userName = '$name', Email = '$email', tel = '$tel' WHERE id = '$userid'";
+$sql = "UPDATE users SET userName = '$name', Email = '$email', tel = '$tel', password = $pass WHERE id = '$userid'";
 
 $connection ->query($sql);
 
- header("location: ./user-panel.php?id='$userid'");
+    header("location: ./user-panel.php?id='$userid'&data='success'");
+
+ 

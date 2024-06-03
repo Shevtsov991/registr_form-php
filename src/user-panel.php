@@ -39,6 +39,9 @@ $userid =$row['id']
     <div class="form">
         <h1 class="titel">Добро пожаловать <?php echo $name;?><h1>
         <h2 class="titel">Изменить данные</h2>
+            <?php if(!empty($_GET['data'])): ?>
+            <p><?php echo "Данные изменены!"?></p>  
+            <?php endif?>
         <form action="./update.php" method="get">
             <div class="input-block">
             <input type="text" placeholder="Введите имя" name="name" value="<?php echo $name;?>">

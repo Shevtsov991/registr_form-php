@@ -1,5 +1,5 @@
 <?php
-define('SMARTCAPTCHA_SERVER_KEY', '<ключ сервера>');
+define('SMARTCAPTCHA_SERVER_KEY', '<Ключ сервера>');
 
 function check_captcha($token) {
     $ch = curl_init();

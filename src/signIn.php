@@ -18,7 +18,7 @@
             <input type="password" placeholder="Введите пароль" name="password"> 
             <div
                 class="smart-captcha"
-                data-sitekey="<ключ клиента>"
+                data-sitekey="<Ключ клиента>"
                 data-hl="ru"
                 data-callback="yandex_captcha"
             ></div>
