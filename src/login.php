@@ -40,7 +40,7 @@ if (empty($login) || empty($password)) {
        header("Location: ./user-panel.php?id='$id'");
     }else{
         echo "Пользователь не найден";
-        echo '<a href= "../index.php"><button>На главную</button></a>';
+        echo $back;
     }
     
 }
